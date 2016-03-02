@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Kalah</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="MainController.js"></script>
+
+</head>
+<body>
+
+<div ng-app="myApp">
+    <div ng-controller="MainController">
+
+
+        <br>
+        <input type="button" value="New Game" ng-click="init()" />
+        <br>
+        <input type="text" ng-model="gameId" value="{{gameId}}"/>
+        <input type="button" value="Join Game" ng-click="join()" />
+        <br>
+        <input type="button" value="Refresh Game" ng-click="refresh()" />
+        <br>
+        <table class="frame">
+            <tr>
+                <th>Player</th>
+                <th>Opponents Storage</th>
+                <th>House</th>
+                <th>House</th>
+                <th>House</th>
+                <th>House</th>
+                <th>House</th>
+                <th>House</th>
+                <th>Your Storage</th>
+            </tr>
+            <tr>
+                <td>Opponent</td>
+                <th>           </th>
+                <td ng-repeat="amount in opponentHouses.slice().reverse() track by $index">{{amount}}</td>
+            </tr>
+            <tr>
+                <th>           </th>
+                <td>{{opponentStorage}}</td>
+                <th>           </th>
+                <th>           </th>
+                <th>           </th>
+                <th>           </th>
+                <th>           </th>
+                <th>           </th>
+                <td>{{playerStorage}}</td>
+            </tr>
+            <tr>
+                <td>You</td>
+                <th>           </th>
+                <td ng-repeat="amount in playerHouses track by $index">{{amount}}</td>
+            </tr>
+            <tr>
+                <th>Make Turn</th>
+                <th>           </th>
+                <th><input type="button" value="House #1" ng-click="doTurn(0)" /></th>
+                <th><input type="button" value="House #2" ng-click="doTurn(1)" /></th>
+                <th><input type="button" value="House #3" ng-click="doTurn(2)" /></th>
+                <th><input type="button" value="House #4" ng-click="doTurn(3)" /></th>
+                <th><input type="button" value="House #5" ng-click="doTurn(4)" /></th>
+                <th><input type="button" value="House #6" ng-click="doTurn(5)" /></th>
+
+            </tr>
+        </table>
+        <h1>Is Your Turn: {{playerTurn}}</h1>
+    </div>
+</div>
+
+
+</body>
+</html>

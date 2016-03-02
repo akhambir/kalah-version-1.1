@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: kalah-akhambir
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: akhambir
+Implementation-Vendor-Id: com.bb.akhambir
+Created-By: Apache Maven 3.0.5
+Build-Jdk: 1.8.0_60
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: com.bb.akhambir.KalahAkhambirApplication
+

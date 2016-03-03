@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: Users/akhambir/Download/kalah-akhambir/src/main/java/com/b
+ b/akhambir/KalahAkhambirApplication.java
+Main-Class: com.bb.akhambir.KalahAkhambirApplication
+
